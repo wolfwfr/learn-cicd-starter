@@ -40,9 +40,6 @@ func TestAuth(t *testing.T) {
 				// test
 				key, err := GetAPIKey(tc.input)
 
-				// HACK: force test failure for ci setup
-				t.Fatal("nope")
-
 				// assert
 				if tc.expErr {
 					if err == nil {
